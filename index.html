@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web en GitHub</title>
+    <title>rodro</title>
     <style>
+        /* Estado inicial oscuro */
         body, html {
             height: 100%;
             margin: 0;
@@ -12,15 +13,29 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #000;
+            color: #fff;
         }
-        h1 {
-            font-size: 3rem;
-            color: #333;
+
+        /* Clase para el efecto flash */
+        .flash {
+            background-color: #fff !important;
+            color: #000 !important;
         }
+
+        h1 { font-size: 3rem; }
     </style>
 </head>
 <body>
-    <h1>rodro</h1>
+
+    <h1>flashbang</h1>
+
+    <script>
+        // Cambia a blanco tras 2 segundos (2000ms) de forma brusca
+        setTimeout(() => {
+            document.body.classList.add('flash');
+        }, 2000);
+    </script>
+
 </body>
 </html>
