@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            transition: background-color 0.1s;
+        }
+        .flash { background-color: white !important; color: black !important; }
+    </style>
+</head>
+<body id="fondo">
+    <h1 id="texto">Loading...</h1>
+
+    <script>
+        const cuerpo = document.getElementById('fondo');
+        const texto = document.getElementById('texto');
+
+        setTimeout(() => {
+            cuerpo.classList.add('flash');
+            texto.innerText = "FLASHBANG!";
+        }, 1000); // 1 segundo
+    </script>
+</body>
+</html>
